@@ -30,7 +30,7 @@ class View:
         self.txt_titolo = ft.Text(value="Gestione Album Musicali", size=38, weight=ft.FontWeight.BOLD)
 
         # Riga 1
-        self.txt_durata = ft.TextField(label="Durata (in min)")
+        self.txt_durata = ft.TextField(label="Durata (in min)",on_change=self.controller.populate_dd_album)
         self.pulsante_crea_grafo = ft.ElevatedButton(text="Crea Grafo",
                                                     on_click=self.controller.handle_crea_grafo)
         row1 = ft.Row([
